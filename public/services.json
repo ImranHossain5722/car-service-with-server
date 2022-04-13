@@ -1,0 +1,59 @@
+[
+
+    {
+"id":1,
+"name":"Oil Change",
+"price":100, 
+"description": "Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident totam unde consequatur  Perferendis blanditiis a velit.",
+"img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1649095551/ratingImages/pexels-alexey-avilov-9956958_j5czge.jpg"
+
+},
+
+{
+
+    "id":2,
+    "name":"window Change",
+    "price":500, 
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident totam unde consequatur  Perferendis blanditiis a velit.",
+    "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1649687204/car-rep_r5jsku.jpg"
+    
+},
+{
+
+    "id":3,
+    "name":"Change",
+    "price":1000, 
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident totam unde consequatur  Perferendis blanditiis a velit.",
+    "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1648239067/Lamborghini_gmlua6.jpg"
+    
+},
+{
+
+    "id":4,
+    "name":"Bike",
+    "price":5000, 
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident totam unde consequatur  Perferendis blanditiis a velit.",
+    "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1648239068/yellow-Ferrari_etvgni.jpg"
+    
+},
+{
+
+    "id":5,
+    "name":"window",
+    "price":300, 
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident totam unde consequatur  Perferendis blanditiis a velit.",
+    "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1648239068/Rolls-Royce_chuqwm.jpg"
+    
+},
+{
+
+    "id":6,
+    "name":"Black-Ferrari",
+    "price":300, 
+    "description":"Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident totam unde consequatur  Perferendis blanditiis a velit.",
+    "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1648239069/balckFerrari_asl6ys.jpg"
+    
+}
+
+
+]
