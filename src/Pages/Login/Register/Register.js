@@ -1,37 +1,42 @@
-// import React,{useRef} from "react";
+import React,{useState} from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link ,useNavigate } from "react-router-dom";
-import { useCreateUserWithEmailAndPassword, createUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword,  useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 
 
 const Register = () => {
+  
+  const [agree,setAgree]=useState(false);
+
   const [
     createUserWithEmailAndPassword,
     user,
     loading,
     error,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  ] = useCreateUserWithEmailAndPassword (auth,{sendEmailVerification: true});
+
+   //update profile
+  const [updateProfile, updating, errorProfile] = useUpdateProfile(auth);
   
   const navigate =useNavigate();
   const navigateLogin = () =>{
     navigate('/login')
   }
-    if(user){
-      navigate('/home')
-    }
 
-    const handelSubmitRegister = event =>{
+
+    const handelSubmitRegister = async (event) =>{
         event.preventDefault();
       
         const name =event.target.name.value;
         const email= event.target.email.value ;
         const password=event.target.password.value ;
 
-        createUserWithEmailAndPassword(email, password)
-
+        await createUserWithEmailAndPassword(email, password)
+        await updateProfile({displayName:name })
+        navigate('/home')
     }
 
   return (
@@ -60,10 +65,10 @@ const Register = () => {
           <Form.Control type="password" name="password" placeholder="Password" required />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+          <Form.Check className={agree? 'text-primary' : 'text-danger' } onClick={()=> setAgree(!agree)} type="checkbox" name="terms" id="terms" label="Accept Car-Services Terms And Conditions"/> 
         </Form.Group>
-        <Button variant="primary" type="submit">
-          Submit
+        <Button variant="primary" type="submit" disabled={!agree}>
+          Register
         </Button>
       </Form>
       <p>Already have an account ? <Link to="/login" className="text-danger text-decoration-none" onClick={navigateLogin}>Login</Link> </p>

@@ -39,9 +39,9 @@ const Header = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-              
               <Nav.Link as={Link} to="about">About</Nav.Link>
-              { user ? <button className='btn btn primary' onClick={handelSignOut}>Sign Out</button>:
+
+              {user?<button className='btn btn primary' onClick={handelSignOut}>Sign Out</button>:
                 <Nav.Link eventKey={2} as={Link} to="login">
                 Login
                </Nav.Link>
