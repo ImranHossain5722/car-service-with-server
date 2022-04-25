@@ -4,6 +4,7 @@ import { Link ,useNavigate, useLocation } from "react-router-dom";
 import {useSignInWithEmailAndPassword,useSendPasswordResetEmail} from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from "../SocialLogin/SocialLogin";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 
 
@@ -54,6 +55,7 @@ const Login = () => {
     }
   return (
     <div className='container w-50 mx-auto'>
+      <PageTitle title="Login"></PageTitle>
       <h1 className='text-center mt-2' >Login Please</h1>
 
       <Form onSubmit={hadelSubmit}>

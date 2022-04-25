@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import './index.css';
-import {HelmetProvider} from 'react-helmet' 
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HelmetProvider } from 'react-helmet-async';
 
 ReactDOM.render(
   <HelmetProvider>
