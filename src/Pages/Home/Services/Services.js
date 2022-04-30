@@ -18,7 +18,9 @@ const Services = () => {
             <h2  className='service-title text-primary m-5' > Our services:{services.length}</h2>
             <div id='services' className="services-container">
             {
-                services.map(service=><Service key={service._id} service={service}></Service>)
+                services.map(service=><Service key={service._id} service={service}>
+                    
+                </Service>)
             }
             </div>
         </div>
